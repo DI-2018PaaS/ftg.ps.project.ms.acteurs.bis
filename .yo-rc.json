@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ftg.ps.project.ms.acteur"
+    },
+    "jhipsterVersion": "5.7.1",
+    "applicationType": "microservice",
+    "baseName": "acteur",
+    "packageName": "ftg.ps.project.ms.acteur",
+    "packageFolder": "ftg/ps/project/ms/acteur",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YmQwMzYzZjZiYTYxMzk3Mzc0OTMyODc2MzBjNjEyNGE1ODU0NDkzMzdkMTM0NTc0NmRlYTc5YmU4MThhOTI2ZjNiYjYzOGQxNzNmNDY3MTIzYmJjMjlmYThmYTBjNmY0ZWVkODllNWIwODdhY2UzZmJmMWJmOGU0NzJlY2IyNTA=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
