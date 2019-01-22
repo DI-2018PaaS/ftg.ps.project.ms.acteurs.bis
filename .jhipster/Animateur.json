@@ -1,0 +1,89 @@
+{
+    "name": "Animateur",
+    "fields": [
+        {
+            "fieldName": "animateurId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userCreated",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userLastModif",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateLastModif",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurType",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "animateur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ancontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "animateur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "agree",
+            "otherEntityName": "fournisseur",
+            "otherEntityRelationshipName": "animateur"
+        },
+        {
+            "relationshipName": "fournisseur",
+            "otherEntityName": "fournisseur",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "agreement",
+            "otherEntityName": "agreement",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190120221415",
+    "entityTableName": "animateur",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "acteur",
+    "applications": "*",
+    "microserviceName": "acteur"
+}

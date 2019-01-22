@@ -1,0 +1,105 @@
+{
+    "name": "Fournisseur",
+    "fields": [
+        {
+            "fieldName": "fournisseurId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userCreated",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userLastModif",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateLastModif",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "animateur",
+            "otherEntityName": "animateur",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "foclientBanque",
+            "otherEntityName": "banque",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "fournisseur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "foclientOrga",
+            "otherEntityName": "organisme",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "fournisseur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurType",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "fournisseur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "fcontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "fournisseur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "anim",
+            "otherEntityName": "animateur",
+            "otherEntityRelationshipName": "fournisseur"
+        },
+        {
+            "relationshipName": "agreement",
+            "otherEntityName": "agreement",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190120221416",
+    "entityTableName": "fournisseur",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "acteur",
+    "applications": "*",
+    "microserviceName": "acteur"
+}

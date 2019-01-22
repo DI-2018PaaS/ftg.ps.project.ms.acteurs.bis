@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Contact.
+    -->
+    <changeSet id="20190120221413-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="organisme_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_organisme_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organisme"/>
+
+        <addForeignKeyConstraint baseColumnNames="adresse_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_adresse_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="adresse"/>
+
+        <addForeignKeyConstraint baseColumnNames="banque_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_banque_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="banque"/>
+
+        <addForeignKeyConstraint baseColumnNames="animateur_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_animateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="animateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="fournisseur_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_fournisseur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fournisseur"/>
+
+        <addForeignKeyConstraint baseColumnNames="acheteur_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_acheteur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="acheteur"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,87 @@
+{
+    "name": "Acheteur",
+    "fields": [
+        {
+            "fieldName": "acheteurId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userCreated",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userLastModif",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateLastModif",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "clientBanque",
+            "otherEntityName": "banque",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "clientOrga",
+            "otherEntityName": "organisme",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurType",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "acontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "acheteur"
+        }
+    ],
+    "changelogDate": "20190120221417",
+    "entityTableName": "acheteur",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "acteur",
+    "applications": "*",
+    "microserviceName": "acteur"
+}

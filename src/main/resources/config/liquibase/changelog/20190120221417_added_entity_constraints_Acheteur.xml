@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Acheteur.
+    -->
+    <changeSet id="20190120221417-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="client_banque_id"
+                                 baseTableName="acheteur"
+                                 constraintName="fk_acheteur_client_banque_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="banque"/>
+
+        <addForeignKeyConstraint baseColumnNames="client_orga_id"
+                                 baseTableName="acheteur"
+                                 constraintName="fk_acheteur_client_orga_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="organisme"/>
+
+        <addForeignKeyConstraint baseColumnNames="acteur_type_id"
+                                 baseTableName="acheteur"
+                                 constraintName="fk_acheteur_acteur_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="acteur_type"/>
+
+    </changeSet>
+</databaseChangeLog>
